@@ -1,4 +1,4 @@
-package tp05;
+package tp05_06_07_08;
 
 public class Compte {
     private String _numCompte;
@@ -27,7 +27,8 @@ public class Compte {
 
     public Compte() { this("0000-0000-0000-0000", 0.00);}
 
-    public void Display(){
-        System.out.println("Compte N° "+get_numCompte()+" with a balance of : "+get_solde());
+    @Override
+    public String toString(){
+        return "Compte N° "+ get_numCompte() + " with a balance of : " + get_solde();
     }
 }
