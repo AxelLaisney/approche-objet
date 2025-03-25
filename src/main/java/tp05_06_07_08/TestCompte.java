@@ -11,7 +11,7 @@ public class TestCompte {
         Compte compteN = new Compte();
         CompteTaux compteT = new CompteTaux();
 
-        Object[] comptes = new Object[2];
+        Compte[] comptes = new Compte[2];
         comptes[0] = compteN;
         comptes[1] = compteT;
 
