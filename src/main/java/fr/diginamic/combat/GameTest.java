@@ -9,11 +9,11 @@ public class GameTest {
         Turn turn = new Turn();
         HashMap<Entity, Integer> winner = new HashMap<>();
         boolean keepGoing = true;
+
         System.out.println("Welcome to a simple combat simulation!");
         System.out.println("Please enter your name: ");
 
-//        String playerName = scan.next();
-        String playerName = "Axel";
+        String playerName = scan.next();
 
         Player player = new Player(playerName);
         Monster monster  = turn.generateOpponent();

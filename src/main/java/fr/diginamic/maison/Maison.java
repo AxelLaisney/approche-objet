@@ -42,7 +42,7 @@ public class Maison {
     public double getSuperficieParType(Piece piece){
         double superficietotal = 0;
         for(Piece p: pieces){
-            if(p.getClass().getSimpleName() == piece.getClass().getSimpleName()){
+            if(p.getClass().getSimpleName().equals(piece.getClass().getSimpleName())){
                 superficietotal += p.getSuperficie();
             }
         }
@@ -52,7 +52,7 @@ public class Maison {
     public int NbPieceParType(Piece piece){
         int nbPiece = 0;
         for(Piece p: pieces){
-            if(p.getClass().getSimpleName() == piece.getClass().getSimpleName()){
+            if(p.getClass().getSimpleName().equals(piece.getClass().getSimpleName())){
                 nbPiece ++;
             }
         }
