@@ -1,8 +1,16 @@
 package sets;
 
+import annotations.ToString;
+
+import java.lang.reflect.Field;
+
 public class Pays {
+    Class classe = this.getClass();
+    @ToString
     private String _nom;
+    @ToString
     private int _hab;
+
     private double _PIB;
 
     public String get_nom() {
@@ -27,6 +35,24 @@ public class Pays {
 
     public void set_PIB(double _PIB) {
         this._PIB = _PIB;
+    }
+
+    @Override
+    public String toString(){
+        StringBuilder builder = new StringBuilder();
+        Field[] fields = classe.getDeclaredFields();
+        for(Field f: fields){
+            f.setAccessible(true);
+            if(f.isAnnotationPresent(ToString.class)){
+                try {
+                    builder.append(f.get(this)).append(" ");
+                } catch (IllegalAccessException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+        }
+        return  builder.toString();
     }
 
     public Pays(String n, int h, double p){

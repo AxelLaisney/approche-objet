@@ -9,20 +9,21 @@ public class TestSetString {
 
         Collections.addAll(pays, "USA", "France", "Allemagne", "UK", "Italie", "Japon", "Russie", "Inde");
 
-        int max = 0;
-        String s = "";
-        for(String p: pays){
-            if (p.length() > max){
-                max = p.length();
-                s = p;
-            }
-        }
+//        int max = 0;
+//        String s = "";
+//        for(String p: pays){
+//            if (p.length() > max){
+//                max = p.length();
+//                s = p;
+//            }
+//        }
+//
+//        System.out.println("Mot le plus long: "+s);
+//        pays.remove(s);
+//        System.out.println("Removed");
+//        for(String p: pays){
+//            System.out.println(p);
+//        }
 
-        System.out.println("Mot le plus long: "+s);
-        pays.remove(s);
-        System.out.println("Removed");
-        for(String p: pays){
-            System.out.println(p);
-        }
     }
 }
